@@ -40,11 +40,21 @@ ul.nav > li > a:hover{
 }
 
 
-/**CODES FOR NAVIGATION PANE**/
+/** END CODES FOR NAVIGATION PANE**/
 
 
 body{
     display:block;
     margin:0px;
     overflow:hidden;
+}
+
+/*section part*/
+
+.box{
+
+    border:1px solid black;
+    float:left;
+    padding:50px;   
+
 }
