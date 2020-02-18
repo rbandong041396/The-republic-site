@@ -10,48 +10,38 @@ table.tble_1{
 .tble_1 > thead > tr > th.title_home{ /*can call .title_home*/
 
     font-size:x-large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: courier;
     text-align: left;
     padding-left:30px;
     color:white;
 
 }
 
-
 /**CODES FOR NAVAGATION PANE**/
 
-
-ul > li {
-    float: right;
-}
 table.tble_1 > thead > tr > th > ul.nav{ 
     list-style-type: none; 
-    margin:0px;
-    
-    font-size: 1em;
+    font-size: .9em;
+    font-family: Courier;
+    display:flex;
+    margin:auto;
+    flex-wrap:nowrap;
 }
 
-li{
-    width:25%;
-    text-align: center;
-}
-
+.nav > li{
+   width:100%;
+   transition: .3s ease;
+}   
 ul.nav > li > a{
     display:block;
     text-decoration: none;
-    color:white;
-    
+    color:white;  
     padding:10px;
+    
 }
-ul.nav > li > a:hover{
+ul.nav > li:hover{
     background-color: forestgreen;
 }
-th > .nav  {
-
-    font-family: Courier;
-
-}
-
 
 /** END CODES FOR NAVIGATION PANE**/
 
@@ -64,25 +54,31 @@ body{
 
 /*section part*/
 /*For forms (sign in)*/
-.box{
 
-    border:1px solid black;
-    padding:50px;   
-
-}
 
 .clearfix{
-    border:1px solid black;
-    margin:10%;
-    padding:10%;
+    display:flex;
+    margin:50px;
+    justify-content: center;
 }
 
-@media screen and (max-width:800px) {
-    li{
-        width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+legend{
+    text-align:center;    
+}
+
+@media screen and (max-width : 750px ){
+    .nav > li{
+       /* The width is 100%, when the viewport is 800px or smaller */
         font-size:.8em;
         text-align:right;
+        
+    }
+    .nav{
+        flex-direction: column;
     }
   }
-
   /*End of (For forms (sign in))*/
+
+legend > ul {
+    display:flex;
+}
