@@ -20,7 +20,6 @@ table.tble_1{
 /**CODES FOR NAVAGATION PANE**/
 
 table.tble_1 > thead > tr > th > ul.nav{ 
-    list-style-type: none; 
     font-size: .9em;
     font-family: Courier;
     display:flex;
@@ -41,8 +40,11 @@ ul.nav > li > a{
 }
 ul.nav > li:hover{
     background-color: forestgreen;
-}
 
+}
+li{
+    list-style-type: none;
+}
 /** END CODES FOR NAVIGATION PANE**/
 
 
@@ -57,13 +59,14 @@ body{
 
 
 .clearfix{
-    display:flex;
+    display: flex;
     margin:50px;
     justify-content: center;
 }
+.credentials{
+    display:flex;
+    border-radius: 4px;
 
-legend{
-    text-align:center;    
 }
 
 @media screen and (max-width : 750px ){
@@ -79,6 +82,25 @@ legend{
   }
   /*End of (For forms (sign in))*/
 
-legend > ul {
-    display:flex;
+
+/*Input display*/
+
+input[type=text],[type=password]{
+    padding:10px;
+    margin:10px;
+    outline:none;
+    border:1px solid rgb(138, 138, 138);
+    border-radius: 4px;
+    width:80%;
 }
+input[type=submit]{
+    padding:10px;
+    margin:10px;
+    border:1px solid rgb(138, 138, 138);
+    border-radius: 4px;
+    width:90%;
+}
+input[type=text]:focus,[type=password]:focus{
+    background-color:lightblue;
+}
+/*End of Input display*/
