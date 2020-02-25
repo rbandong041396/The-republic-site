@@ -1,5 +1,8 @@
 html{
     font-size:20px;
+    max-width: 1600px;
+    align-content: center;
+    margin: auto;
 }
 table.tble_1{
     table-layout: fixed; /*Set all the column into equal size*/
@@ -32,7 +35,7 @@ table.tble_1 > thead > tr > th > ul.nav{
    transition: .3s ease;
 }   
 ul.nav > li > a{
-    display:block;
+    display:inline-block;
     text-decoration: none;
     color:white;  
     padding:10px;
@@ -44,6 +47,7 @@ ul.nav > li:hover{
 }
 li{
     list-style-type: none;
+    
 }
 /** END CODES FOR NAVIGATION PANE**/
 
@@ -52,6 +56,7 @@ body{
     display:block;
     margin:0px;
     overflow:hidden;
+
 }
 
 /*section part*/
@@ -62,45 +67,110 @@ body{
     display: flex;
     margin:50px;
     justify-content: center;
+    
 }
 .credentials{
     display:flex;
-    border-radius: 4px;
-
+    border-radius: 7px;
+    border:none;
+    background-color: mediumseagreen;
+    text-align:center;
+    color:white;
+    background-image: url("../img/avatar.png");
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    padding-top:80px;
+    background-position: center 10px; /*top right bottom left*/
 }
 
-@media screen and (max-width : 750px ){
+@media screen and (max-width : 850px ){
     .nav > li{
        /* The width is 100%, when the viewport is 800px or smaller */
-        font-size:.8em;
-        text-align:right;
+        font-size:.9em;
+        text-align:center   ;
+        line-height: auto;
         
     }
     .nav{
         flex-direction: column;
     }
   }
+  
   /*End of (For forms (sign in))*/
 
 
 /*Input display*/
-
+input[type=text]{ /*For back ground of the text box*/
+    background-image: url("../img/user.jpg");
+    background-size: 40px 40px;
+    background-position: 0px, 10px;
+    background-repeat:no-repeat;
+   
+}
+input[type=password]{/*For back ground of the password*/
+    background-image: url("../img/password.jpg");
+    background-size: 25px 25px;
+    background-position: 7px, 10px;
+    background-repeat:no-repeat;
+}
 input[type=text],[type=password]{
-    padding:10px;
+    padding:10px 10px 10px 40px;
     margin:10px;
     outline:none;
     border:1px solid rgb(138, 138, 138);
     border-radius: 4px;
-    width:80%;
+    width:69%;
+    
 }
 input[type=submit]{
     padding:10px;
     margin:10px;
-    border:1px solid rgb(138, 138, 138);
+    border:1px solid rgb(65, 177, 93);
     border-radius: 4px;
     width:90%;
+    color:white;
+    background-color: rgb(34, 139, 34);
 }
-input[type=text]:focus,[type=password]:focus{
-    background-color:lightblue;
+input[type=submit]:hover{
+    background-color:forestgreen;
+    border:1px solid rgb(34, 139, 34);
+    color:white;
 }
+input[type=text]:hover,[type=password]:hover{
+    border:2px solid rgb(5, 133, 62);
+}
+input[type=checkbox]{
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+.signed{
+    display:flex;
+    padding-left:7px;
+    font-family:'Courier New', Courier;
+    font-size: .8em;
+    text-align: left;
+}
+
 /*End of Input display*/
+
+/*Design for signup footer*/
+    .signup_footer{
+        text-decoration: none;
+        font-size:.6em; /*relative to html font size 20px*/
+        margin:10px;
+        color:white;
+        text-align: left;
+    }
+    a.signup_footer:hover{
+        text-decoration: underline;
+    }
+/*End of Design for sign up footer*/
+footer{
+  font-size:.6em;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   color:gray;
+}
