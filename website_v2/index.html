@@ -8,6 +8,7 @@
             The Republic v.2
         </title>
         <link rel="stylesheet" href="css/cssv1.css">
+        <script defer src="js/script.js"></script>
     </head>
     <body>
             <table class="tble_1">
@@ -21,7 +22,7 @@
                 		<th>
                             <ul class = "nav">
                                 <li>
-                                    <a href="#home">                                        
+                                    <a href="#home">
                                         Home
                                     </a>
                                 </li>
@@ -49,29 +50,32 @@
                 </tbody>
             </table>
     <div class="clearfix">
-        <form>
+        <div id ="error"></div>
+        <form action="/" method="GET" id = "form">
             <fieldset class="credentials"> 
                     <div class="headerform">
                         Login
                     </div>
-                    <input type="text" id="uname" name="uname" placeholder="Username">
-                    <input type="Password" id="pword" name="pword" placeholder="Password">
+                    <div>
+                        <input type="text" id="uname" name="uname" placeholder="Username" >
+                    </div>
+                    <div>
+                        <input type="Password" id="pword" name="pword" placeholder="Password" >
+                    </div>
                     <ul class="remember_me">
                         <li>
                             <label for="singed"><input type="checkbox" id="signed">
                                 Remember me</label>
                         </li>
                     </ul>
-                        
-                    
-                    <input type="submit">
+                    <button type="submit">Submit</button>
                     <a href="#sign_up" class="signup_footer">
                      Create an account
                     </a>
             </fieldset>
         </form>
-        
-    </div>  
+
+    </div>
 
     <footer>
         <p>
